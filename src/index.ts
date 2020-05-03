@@ -1,7 +1,11 @@
-/* Let's import some global CSS for those cases where we don't want to (or
-can't) use CSS Modules. */
+import { Game } from "./bigby-game";
 import "./css/global.css";
 
-import { Game } from "./bigby-game";
+/* Set up PIXI */
+import * as PIXI from "pixi.js";
+window.PIXI = PIXI;
+PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
+/* Start the game */
 const game = new Game();
+game.awake();

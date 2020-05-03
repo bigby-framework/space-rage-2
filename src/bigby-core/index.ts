@@ -1,3 +1,4 @@
 import Node from "./Node";
+import Signal from "./Signal";
 
-export { Node };
+export { Node, Signal };
