@@ -2,6 +2,6 @@
 can't) use CSS Modules. */
 import "./css/global.css";
 
-/* Your code here! */
-const message: string = "Insert your TypeScript code here!";
-console.log(message);
+import { Game } from "./bigby-game";
+
+const game = new Game();
