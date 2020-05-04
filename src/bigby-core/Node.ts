@@ -12,19 +12,22 @@ export default class Node {
   /** Children of this node. */
   children = new Array<Node>();
 
-  /* Constructor */
-  constructor() {
-    this.setup();
-  }
+  onAwake() {}
 
-  setup() {}
-
-  /* Signals */
-  onAwake = Signal();
-
+  /**
+   * Wake up this node and all of its children. Will trigger the onAwake signal.
+   */
   awake() {
+    /* Sanity check */
     if (this.state !== "new") return;
+
+    /* Switch state */
     this.state = "awake";
-    this.onAwake.emit(null);
+
+    /* Invoke onAwake lifecycle method */
+    this.onAwake();
+
+    /* Wake up children */
+    this.children.forEach((child) => child.awake());
   }
 }
