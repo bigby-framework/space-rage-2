@@ -7,12 +7,12 @@ export default class Game extends Node {
   width = 1024;
   height = 576;
 
-  onAwake() {
+  awake() {
     this.app = new PIXI.Application({ width: this.width, height: this.height });
     document.body.appendChild(this.app.view);
   }
 
-  onDestroy() {
+  destroy() {
     if (this.app) {
       document.body.removeChild(this.app.view);
       this.app.destroy();

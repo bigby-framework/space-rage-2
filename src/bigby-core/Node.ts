@@ -12,22 +12,26 @@ export default class Node {
   /** Children of this node. */
   children = new Array<Node>();
 
-  onAwake() {}
+  /* LIFECYCLE METHODS */
+  awake() {}
+  update(dt: number) {}
+  lateUpdate(dt: number) {}
+  destroy() {}
 
   /**
-   * Wake up this node and all of its children. Will trigger the onAwake signal.
+   * Wake up a node and all of its children.
    */
-  awake() {
+  static awake(node: Node) {
     /* Sanity check */
-    if (this.state !== "new") return;
+    if (node.state !== "new") return;
 
     /* Switch state */
-    this.state = "awake";
+    node.state = "awake";
 
-    /* Invoke onAwake lifecycle method */
-    this.onAwake();
+    /* Invoke lifecycle method */
+    node.awake();
 
     /* Wake up children */
-    this.children.forEach((child) => child.awake());
+    node.children.forEach((child) => Node.awake(child));
   }
 }

@@ -1,3 +1,4 @@
+import { Node } from "./bigby-core";
 import { Game } from "./bigby-game";
 import "./css/global.css";
 
@@ -8,4 +9,4 @@ PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 /* Start the game */
 const game = new Game();
-game.awake();
+Node.awake(game);
