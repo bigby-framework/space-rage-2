@@ -1,15 +1,9 @@
 import { Entity } from "@bigby/core";
-import {
-  Renderer,
-  Ticker,
-  Transform,
-  Sprite,
-  ResourceLoader,
-} from "@bigby/game";
+import { Renderer, ResourceLoader, Ticker } from "@bigby/game";
+import * as PIXI from "pixi.js";
 import mainScene from "./scenes/main";
 
 /* Set up PIXI */
-import * as PIXI from "pixi.js";
 window.PIXI = PIXI;
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 PIXI.settings.STRICT_TEXTURE_CACHE = true;
