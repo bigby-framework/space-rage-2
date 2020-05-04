@@ -9,7 +9,7 @@ export default () =>
     behaviors: [
       Transform,
       [Sprite, { uri: "/assets/lemming.png" }],
-      PlayerInput,
+
       PlayerController,
     ],
   });
