@@ -18,6 +18,32 @@ export default class Node {
   lateUpdate(dt: number) {}
   destroy() {}
 
+  set(props: Partial<this>) {
+    Object.assign(this, props);
+    return this;
+  }
+
+  add(child: Node) {
+    this.children.push(child);
+    child.parent = this;
+    return child;
+  }
+
+  /* Finder methods */
+  getChild<T extends Node = Node>(
+    constructor: NodeConstructor<T>
+  ): T | undefined {
+    return this.children.find((child) => child instanceof constructor) as T;
+  }
+  getSibling<T extends Node = Node>(constructor: NodeConstructor<T>) {}
+  getNearest<T extends Node = Node>(
+    constructor: NodeConstructor<T>
+  ): T | undefined {
+    return this.parent instanceof constructor
+      ? this.parent
+      : this.parent?.getNearest(constructor);
+  }
+
   /**
    * Wake up a node and all of its children.
    */
