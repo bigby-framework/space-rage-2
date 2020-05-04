@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@bigby/core@^0.7.0-alpha.3":
+  version "0.7.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@bigby/core/-/core-0.7.0-alpha.3.tgz#aac23020cdd5075ade2fef447a81cfa10b8b0326"
+  integrity sha512-Iu2H6dN0GRwFGc+N2h+Es5YgjUCI9d/1s+VRRLPTYjuwC+uELBH6mS8CRTHTVBrfZsiVgG2MBPtfQSe7Xeuu4g==
+
 "@pixi/accessibility@5.2.4":
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/@pixi/accessibility/-/accessibility-5.2.4.tgz#ed5e7fa9a5977b63fb798a16783ee0a1961b5ffc"
