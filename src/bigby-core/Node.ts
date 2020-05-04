@@ -34,4 +34,18 @@ export default class Node {
     /* Wake up children */
     node.children.forEach((child) => Node.awake(child));
   }
+
+  static destroy(node: Node) {
+    /* Sanity check */
+    if (node.state === "destroyed") return;
+
+    /* Destroy all children */
+    node.children.forEach((child) => Node.destroy(child));
+
+    /* Switch state */
+    node.state = "destroyed";
+
+    /* Invoke lifecycle method */
+    node.destroy();
+  }
 }
