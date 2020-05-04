@@ -9,7 +9,6 @@ PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 
 /* Start the game */
 const game = new Game();
-
-game.add(new Sprite().set({ uri: "/assets/lemming.png" }));
+game.addChild(Sprite, { uri: "/assets/lemming.png" });
 
 Node.awake(game);

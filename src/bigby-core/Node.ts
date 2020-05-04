@@ -23,10 +23,28 @@ export default class Node {
     return this;
   }
 
-  add(child: Node) {
-    this.children.push(child);
-    child.parent = this;
-    return child;
+  addChild<T extends Node = Node>(
+    child: T | NodeConstructor<T>,
+    props?: Partial<T>
+  ): T | false {
+    if (child instanceof Node) {
+      if (this.hasChild(child)) return false;
+
+      /* Establish relationship */
+      this.children.push(child);
+      child.parent = this;
+
+      /* Assign props */
+      if (props) child.set(props);
+
+      return child;
+    } else {
+      return this.addChild(new child(), props);
+    }
+  }
+
+  hasChild(child: Node) {
+    return this.children.includes(child);
   }
 
   /* Finder methods */
