@@ -33,6 +33,7 @@ module.exports = {
     alias: {
       "~": path.resolve(__dirname, "../src"),
     },
+    symlinks: false
   },
   plugins: [
     new CleanWebpackPlugin(),
