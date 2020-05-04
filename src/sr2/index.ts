@@ -1,5 +1,5 @@
 import { Entity } from "@bigby/core";
-import { Renderer, ResourceLoader, Ticker } from "@bigby/game";
+import { Keyboard, Renderer, ResourceLoader, Ticker } from "@bigby/game";
 import * as PIXI from "pixi.js";
 import mainScene from "./scenes/main";
 
@@ -11,7 +11,7 @@ PIXI.settings.STRICT_TEXTURE_CACHE = true;
 /* Game */
 const game = new Entity({
   name: "Main Game",
-  behaviors: [Renderer, Ticker],
+  behaviors: [Renderer, Ticker, Keyboard],
 });
 
 game.awake();

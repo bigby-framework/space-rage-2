@@ -2,10 +2,19 @@
 # yarn lockfile v1
 
 
-"@bigby/core@^0.7.0-alpha.3":
-  version "0.7.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@bigby/core/-/core-0.7.0-alpha.3.tgz#aac23020cdd5075ade2fef447a81cfa10b8b0326"
-  integrity sha512-Iu2H6dN0GRwFGc+N2h+Es5YgjUCI9d/1s+VRRLPTYjuwC+uELBH6mS8CRTHTVBrfZsiVgG2MBPtfQSe7Xeuu4g==
+"@bigby/core@^0.7.0-alpha.4":
+  version "0.7.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@bigby/core/-/core-0.7.0-alpha.4.tgz#fd35f29b96f365b62220f5b9d66de442dcb3ed6d"
+  integrity sha512-9XjoS6c7IXU1TCPY7txNClG5NLQvI67vI2ILxXnYX2qRf+A3ZP9Wqd5DGWxpDy8vMiP0BIT26WjUHAbG85zH3Q==
+
+"@bigby/game@^0.7.0-alpha.4":
+  version "0.7.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@bigby/game/-/game-0.7.0-alpha.4.tgz#cc4e832a8922f7859a5ba60a9c6f9d1aefade0cd"
+  integrity sha512-uW4wx5iNqu+YPZAO2BHPxMDW/cOoxTlKmXNGiJNUh1SVFUVcHUs8vUobMmTpqvlbFD4AFU7+xzK/NzV+aXKw5Q==
+  dependencies:
+    "@bigby/core" "^0.7.0-alpha.4"
+    hotkeys-js "^3.7.6"
+    pixi.js "^5.2.3"
 
 "@pixi/accessibility@5.2.4":
   version "5.2.4"
@@ -2292,6 +2301,11 @@ homedir-polyfill@^1.0.1:
   integrity sha512-eSmmWE5bZTK2Nou4g0AI3zZ9rswp7GRKoKXS1BLUkvPviOqs4YTN1djQIqrXy9k5gEtdLPy86JjRwsNM9tnDcA==
   dependencies:
     parse-passwd "^1.0.0"
+
+hotkeys-js@^3.7.6:
+  version "3.7.6"
+  resolved "https://registry.yarnpkg.com/hotkeys-js/-/hotkeys-js-3.7.6.tgz#b90ae3453a7be2f2b2bed6ee55cb96443944c77b"
+  integrity sha512-X5d16trjp79o+OaCn7syXu0cs+TkLYlK/teE5FhpD1Cj9ROcEIhfIQ7Mhrk761ynF3NQLbLn5xRojP2UuSqDAw==
 
 hpack.js@^2.1.6:
   version "2.1.6"
