@@ -6,23 +6,13 @@ import {
   Sprite,
   ResourceLoader,
 } from "@bigby/game";
+import mainScene from "./scenes/main";
 
 /* Set up PIXI */
 import * as PIXI from "pixi.js";
 window.PIXI = PIXI;
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 PIXI.settings.STRICT_TEXTURE_CACHE = true;
-
-/* Main scene */
-const mainScene = new Entity({
-  name: "Main Scene",
-  behaviors: [Transform, ResourceLoader],
-});
-
-mainScene.addChild({
-  name: "Player",
-  behaviors: [Transform, [Sprite, { uri: "/assets/lemming.png" }]],
-});
 
 /* Game */
 const game = new Entity({
@@ -33,7 +23,8 @@ const game = new Entity({
 game.awake();
 
 /* Preload main scene resources */
-mainScene.preload();
-mainScene.getBehavior(ResourceLoader)?.loader.load(() => {
-  game.addChild(mainScene);
+const scene = mainScene();
+scene.preload();
+scene.getBehavior(ResourceLoader)?.loader.load(() => {
+  game.addChild(scene);
 });
