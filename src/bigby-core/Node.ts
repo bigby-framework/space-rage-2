@@ -2,6 +2,14 @@ import Signal from "./Signal";
 
 export type NodeConstructor<T extends Node> = new (...args: any[]) => T;
 
+export type NodeProps<T extends Node> = Partial<T>;
+
+export type NodeSpec<T extends Node> = [
+  NodeConstructor<T>,
+  NodeProps<T>?,
+  NodeSpec<any>[]?
+];
+
 export default class Node {
   /** State of the node. */
   state: "new" | "awake" | "destroyed" = "new";
@@ -60,6 +68,23 @@ export default class Node {
     return this.parent instanceof constructor
       ? this.parent
       : this.parent?.getNearest(constructor);
+  }
+
+  static make<T extends Node = Node>(spec: NodeSpec<T>): T {
+    const [constructor, props, children] = spec;
+
+    /* Create node instance */
+    const node = new constructor();
+
+    /* Assign props */
+    if (props) node.set(props);
+
+    /* Construct children */
+    children?.forEach((childSpec) => {
+      node.addChild(Node.make(childSpec));
+    });
+
+    return node;
   }
 
   /**
