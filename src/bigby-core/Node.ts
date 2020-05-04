@@ -70,7 +70,7 @@ export default class Node {
       : this.parent?.getNearest(constructor);
   }
 
-  static make<T extends Node = Node>(spec: NodeSpec<T>): T {
+  static make<T extends Node = Node>(...spec: NodeSpec<T>): T {
     const [constructor, props, children] = spec;
 
     /* Create node instance */
@@ -81,7 +81,7 @@ export default class Node {
 
     /* Construct children */
     children?.forEach((childSpec) => {
-      node.addChild(Node.make(childSpec));
+      node.addChild(Node.make(...childSpec));
     });
 
     return node;
