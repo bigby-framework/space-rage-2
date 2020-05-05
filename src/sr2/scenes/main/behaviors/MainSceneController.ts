@@ -1,5 +1,5 @@
 import { GameBehavior, Transform } from "@bigby/game";
-import Camera from "~/sr2/behaviors/Camera";
+import FollowCamera from "~/sr2/behaviors/FollowCamera";
 import PlayerController from "./PlayerController";
 
 export default class MainSceneController extends GameBehavior {
@@ -8,7 +8,7 @@ export default class MainSceneController extends GameBehavior {
   }
 
   awake() {
-    this.getBehavior(Camera)!.target = this.entity
+    this.getBehavior(FollowCamera)!.target = this.entity
       .getChildBehavior(PlayerController)
       ?.getBehavior(Transform);
   }

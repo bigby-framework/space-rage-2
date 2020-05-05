@@ -1,7 +1,7 @@
 import { GameBehavior, Transform, Renderer } from "@bigby/game";
 import { vec2 } from "gl-matrix";
 
-export default class Camera extends GameBehavior {
+export default class FollowCamera extends GameBehavior {
   target?: Transform;
 
   private renderer?: Renderer;
