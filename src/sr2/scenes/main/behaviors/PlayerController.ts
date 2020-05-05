@@ -1,21 +1,29 @@
 import { GameBehavior } from "@bigby/game";
 import PlayerInput from "./PlayerInput";
+import { RigidBody2D } from "@bigby/game/esm/physics";
+import { Vec2 } from "planck-js";
 
 export default class PlayerController extends GameBehavior {
-  input?: PlayerInput;
-
   thrust = 300;
+
+  private input?: PlayerInput;
+  private rb2d?: RigidBody2D;
 
   awake() {
     this.input = this.getNearestBehavior(PlayerInput);
     if (!this.input) throw "Couldn't find a PlayerInput behavior";
+
+    this.rb2d = this.getBehavior(RigidBody2D);
+    if (!this.rb2d)
+      throw "This behavior needs a RigidBody2D on the same entity.";
   }
 
   update(dt: number) {
-    if (this.input) {
-      const stick = this.input.stick;
-      this.transform!.position.x += stick.x * this.thrust * dt;
-      this.transform!.position.y += stick.y * this.thrust * dt;
-    }
+    const stick = this.input!.stick;
+
+    this.rb2d?.body?.applyForceToCenter(
+      new Vec2(stick.x * this.thrust, stick.y * this.thrust),
+      true
+    );
   }
 }

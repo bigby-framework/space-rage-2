@@ -22,6 +22,7 @@
     "html-webpack-plugin": "^4.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "pixi.js": "^5.2.3",
+    "planck-js": "^0.3.12",
     "spritesheet-js": "^1.2.6",
     "stats.js": "^0.17.0",
     "style-loader": "^1.1.2",
