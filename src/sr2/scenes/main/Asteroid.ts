@@ -4,11 +4,9 @@ import PlayerController from "./behaviors/PlayerController";
 
 export default () =>
   new Entity({
-    name: "Player",
+    name: "Asteroid",
     behaviors: [
-      Transform,
-      [Sprite, { uri: "/assets/images/ships/lemming.png", anchor: 0.5 }],
-
-      PlayerController,
+      [Transform, { position: { x: 300, y: 300 } }],
+      [Sprite, { uri: "/assets/images/asteroid.png", anchor: 0.5 }],
     ],
   });
