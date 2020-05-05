@@ -9,6 +9,7 @@ export default class Statistics extends Behavior {
 
   awake() {
     document.body.appendChild(this.stats.dom);
+    this.stats.showPanel(1);
   }
 
   update() {
