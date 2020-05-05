@@ -4,7 +4,7 @@ import PlayerInput from "./PlayerInput";
 export default class PlayerController extends GameBehavior {
   input?: PlayerInput;
 
-  thrust = 100;
+  thrust = 300;
 
   awake() {
     this.input = this.getNearestBehavior(PlayerInput);
