@@ -8,7 +8,7 @@ export default () =>
     name: "Player",
     behaviors: [
       Transform,
-      [Sprite, { uri: "/assets/lemming.png" }],
+      [Sprite, { uri: "/assets/images/ships/lemming.png" }],
 
       PlayerController,
     ],
