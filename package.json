@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "yarn dev",
-    "spritesheet": "spritesheet-js -f pixi.js -p assets/ -n sprites --padding 4 assets/sprites/*.png",
+    "spritesheet": "spritesheet-js -f pixi.js -p assets/ --fullpath -n sprites --padding 4 assets/sprites/*.png",
     "build": "webpack --config webpack/webpack.dev.js",
     "build:production": "webpack --config webpack/webpack.prod.js",
     "dev": "webpack-dev-server --config webpack/webpack.dev.js"

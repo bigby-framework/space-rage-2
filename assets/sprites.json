@@ -5,7 +5,7 @@
 		"scale": "1"
 	},
 	"frames": {
-		"asteroid.png":
+		"assets/sprites/asteroid.png":
 		{
 			"frame": {"x":4,"y":4,"w":240,"h":240},
 			"rotated": false,
@@ -13,7 +13,7 @@
 			"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
 			"sourceSize": {"w":240,"h":240}
 		},
-		"lemming.png":
+		"assets/sprites/lemming.png":
 		{
 			"frame": {"x":252,"y":4,"w":128,"h":128},
 			"rotated": false,

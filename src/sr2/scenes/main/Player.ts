@@ -7,7 +7,7 @@ export default () =>
     name: "Player",
     behaviors: [
       Transform,
-      [Sprite, { uri: "assets/sprites/lemming.png", anchor: 0.5 }],
+      [Sprite, { texture: "assets/sprites/lemming.png", anchor: 0.5 }],
 
       PlayerController,
     ],
