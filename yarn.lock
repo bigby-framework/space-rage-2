@@ -2222,11 +2222,6 @@ graceful-fs@^4.1.11, graceful-fs@^4.1.15, graceful-fs@^4.1.2:
   resolved "https://registry.yarnpkg.com/graceful-fs/-/graceful-fs-4.2.4.tgz#2256bde14d3632958c465ebc96dc467ca07a29fb"
   integrity sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
 
-gstats@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/gstats/-/gstats-0.1.0.tgz#75129cdce9cdb4508279dd2decdd5c34920d8d4b"
-  integrity sha512-4PieOEZT1uPRsGRCXHz3Wu/N1za7fMGFHmjO8SYrsgBESGz3nAW5b5ImP0zojgj85IvvSfKqV2H5+XRA7LX1DA==
-
 handle-thing@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/handle-thing/-/handle-thing-2.0.0.tgz#0e039695ff50c93fc288557d696f3c1dc6776754"
