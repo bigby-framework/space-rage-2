@@ -1,0 +1,25 @@
+{
+	"meta": {
+		"image": "sprites.png",
+		"size": {"w":384,"h":248},
+		"scale": "1"
+	},
+	"frames": {
+		"asteroid.png":
+		{
+			"frame": {"x":4,"y":4,"w":240,"h":240},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
+			"sourceSize": {"w":240,"h":240}
+		},
+		"lemming.png":
+		{
+			"frame": {"x":252,"y":4,"w":128,"h":128},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+			"sourceSize": {"w":128,"h":128}
+		}
+	}
+}
