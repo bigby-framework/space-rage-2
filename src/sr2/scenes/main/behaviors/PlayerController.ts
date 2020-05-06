@@ -1,10 +1,10 @@
 import { GameBehavior } from "@bigby/game";
-import PlayerInput from "./PlayerInput";
 import { RigidBody2D } from "@bigby/physics2d";
-import { Vec2 } from "planck-js";
+import PlayerInput from "./PlayerInput";
 
 export default class PlayerController extends GameBehavior {
-  thrust = 300;
+  linearThrust = 8000;
+  angularThrust = 9000;
 
   private input?: PlayerInput;
   private rb2d?: RigidBody2D;
@@ -18,18 +18,18 @@ export default class PlayerController extends GameBehavior {
       throw "This behavior needs a RigidBody2D on the same entity.";
   }
 
-  update(dt: number) {
+  update() {
     const stick = this.input!.stick;
 
     /* Rotate ship with the horizontal axis */
     if (stick.x != 0) {
-      this.rb2d!.body!.applyTorque(500000 * stick.x, true);
+      this.rb2d!.body!.applyTorque(this.angularThrust * stick.x, true);
     }
 
     /* Move ship forward/backward with the vertical axis */
-    this.rb2d?.body?.applyForceToCenter(
-      new Vec2(stick.x * this.thrust, stick.y * this.thrust),
-      true
+    this.rb2d?.accelerate(
+      this.rb2d.getUpVector(),
+      this.linearThrust * -stick.y
     );
   }
 }
