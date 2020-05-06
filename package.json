@@ -14,6 +14,7 @@
   "devDependencies": {
     "@bigby/core": "^0.7.0-alpha.4",
     "@bigby/game": "^0.7.0-alpha.4",
+    "@bigby/physics2d": "^0.7.0-alpha.6",
     "@types/stats.js": "^0.17.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
@@ -21,8 +22,6 @@
     "gl-matrix": "^3.3.0",
     "html-webpack-plugin": "^4.0.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "pixi.js": "^5.2.3",
-    "planck-js": "^0.3.12",
     "spritesheet-js": "^1.2.6",
     "stats.js": "^0.17.0",
     "style-loader": "^1.1.2",

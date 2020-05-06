@@ -1,7 +1,7 @@
 import { Entity } from "@bigby/core";
 import { Sprite, Transform } from "@bigby/game";
 import PlayerController from "./behaviors/PlayerController";
-import { RigidBody2D } from "@bigby/game/esm/physics";
+import { RigidBody2D } from "@bigby/physics2d";
 
 export default () =>
   new Entity({

@@ -1,6 +1,6 @@
 import { Entity } from "@bigby/core";
 import { ResourceLoader, Transform } from "@bigby/game";
-import { PhysicsWorld2D } from "@bigby/game/esm/physics";
+import { PhysicsWorld2D } from "@bigby/physics2d";
 import FollowCamera from "~/sr2/behaviors/FollowCamera";
 import Asteroid from "./Asteroid";
 import MainSceneController from "./behaviors/MainSceneController";
