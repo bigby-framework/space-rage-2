@@ -1,4 +1,4 @@
-import { GameBehavior } from "@bigby/game";
+import { GameBehavior, vec2 } from "@bigby/game";
 import { RigidBody2D } from "@bigby/physics2d";
 import PlayerInput from "./PlayerInput";
 
@@ -19,17 +19,11 @@ export default class PlayerController extends GameBehavior {
   }
 
   update() {
+    if (!this.rb2d) return;
+
     const stick = this.input!.stick;
 
-    /* Rotate ship with the horizontal axis */
-    if (stick.x != 0) {
-      this.rb2d!.body!.applyTorque(this.angularThrust * stick.x, true);
-    }
-
-    /* Move ship forward/backward with the vertical axis */
-    this.rb2d?.accelerate(
-      this.rb2d.getUpVector(),
-      this.linearThrust * -stick.y
-    );
+    /* Move ship into the direction of the stick */
+    this.rb2d.accelerate(vec2.multiply(stick, this.linearThrust));
   }
 }
