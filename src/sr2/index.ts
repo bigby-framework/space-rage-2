@@ -1,9 +1,14 @@
 import { Entity } from "@bigby/core";
-import { Keyboard, Renderer, ResourceLoader, Ticker } from "@bigby/game";
+import {
+  Keyboard,
+  Renderer,
+  ResourceLoader,
+  Ticker,
+  StatsPanel,
+} from "@bigby/game";
 import * as PIXI from "pixi.js";
 import mainScene from "./scenes/main";
 import PlayerInput from "./scenes/main/behaviors/PlayerInput";
-import Statistics from "./behaviors/Statistics";
 
 /* Set up PIXI */
 window.PIXI = PIXI;
@@ -13,7 +18,7 @@ PIXI.settings.STRICT_TEXTURE_CACHE = true;
 /* Game */
 const game = new Entity({
   name: "Main Game",
-  behaviors: [Renderer, Ticker, Keyboard, PlayerInput, Statistics],
+  behaviors: [Renderer, Ticker, Keyboard, PlayerInput, StatsPanel],
 });
 
 game.awake();

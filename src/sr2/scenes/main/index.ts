@@ -1,6 +1,6 @@
 import { Entity } from "@bigby/core";
 import { ResourceLoader, Transform } from "@bigby/game";
-import { PhysicsWorld2D } from "@bigby/physics2d";
+import { Physics2D } from "@bigby/physics2d";
 import FollowCamera from "~/sr2/behaviors/FollowCamera";
 import Asteroid from "./Asteroid";
 import MainSceneController from "./behaviors/MainSceneController";
@@ -14,7 +14,7 @@ export default () =>
       ResourceLoader,
       FollowCamera,
       MainSceneController,
-      [PhysicsWorld2D, { gravity: { x: 0, y: 0 } }],
+      [Physics2D, { gravity: { x: 0, y: 0 } }],
     ],
     children: [Player(), Asteroid()],
   });
