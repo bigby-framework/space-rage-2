@@ -6,6 +6,6 @@ export default () =>
     name: "Asteroid",
     behaviors: [
       [Transform, { position: { x: 300, y: 300 } }],
-      [Sprite, { texture: "assets/sprites/asteroid.png", anchor: 0.5 }],
+      [Sprite, { resource: "assets/sprites/asteroid.png", anchor: 0.5 }],
     ],
   });

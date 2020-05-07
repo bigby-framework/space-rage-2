@@ -8,7 +8,7 @@ export default () =>
     name: "Player",
     behaviors: [
       [Transform],
-      [Sprite, { texture: "assets/sprites/lemming.png", anchor: 0.5 }],
+      [Sprite, { resource: "assets/sprites/lemming.png", anchor: 0.5 }],
       [RigidBody2D],
       [PlayerController],
     ],
