@@ -1,17 +1,18 @@
 import { Behavior } from "@bigby/core";
-import { Keyboard } from "@bigby/game";
+import { Keyboard, vec2 } from "@bigby/game";
 
 export default class PlayerInput extends Behavior {
   private keyboard?: Keyboard;
 
-  stick = { x: 0, y: 0 };
+  stick = vec2.make(0, 0);
 
   awake() {
     this.keyboard = this.getNearestBehavior(Keyboard);
   }
 
   update() {
-    this.stick = { x: 0, y: 0 };
+    this.stick.x = 0;
+    this.stick.y = 0;
 
     const { isPressed } = this.keyboard!;
     if (isPressed("w")) this.stick.y -= 1;
