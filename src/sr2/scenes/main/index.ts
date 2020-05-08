@@ -31,5 +31,12 @@ export default () =>
       MainSceneController,
       [Physics2D, { gravity: { x: 0, y: 0 } }],
     ],
-    children: [background, Player(), Asteroid()],
+    children: [
+      background,
+      Player(),
+      Asteroid(),
+      Asteroid(),
+      Asteroid(),
+      Asteroid(),
+    ],
   });
