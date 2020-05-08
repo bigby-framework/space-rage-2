@@ -15,6 +15,7 @@ const background = new Entity({
       {
         uri: "/assets/backgrounds/space.jpg",
         bounds: { width: 4096, height: 4096 },
+        anchor: 0.5,
       },
     ],
   ],
