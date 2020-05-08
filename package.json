@@ -9,12 +9,11 @@
     "spritesheet": "spritesheet-js -f pixi.js -p assets/ --fullpath -n sprites --padding 4 assets/sprites/*.png",
     "build": "webpack --config webpack/webpack.dev.js",
     "build:production": "webpack --config webpack/webpack.prod.js",
-    "dev": "webpack-dev-server --config webpack/webpack.dev.js"
+    "dev": "webpack-dev-server --config webpack/webpack.dev.js",
+    "bootstrap": "yarn link bigby @bigby/core @bigby/game @bigby/physics2d @bigby/random"
   },
   "devDependencies": {
-    "@bigby/core": "^0.7.0-alpha.4",
-    "@bigby/game": "^0.7.0-alpha.4",
-    "@bigby/physics2d": "^0.7.0-alpha.6",
+    "bigby": "^0.7.0-alpha.7",
     "@types/stats.js": "^0.17.0",
     "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^5.1.1",
