@@ -9,7 +9,7 @@ export default () =>
     behaviors: [
       [Transform],
       [Sprite, { resource: "assets/sprites/lemming.png", anchor: 0.5 }],
-      [RigidBody2D],
+      [RigidBody2D, { linearDamping: 1, angularDamping: 1 }],
       [PlayerController],
     ],
   });

@@ -4,7 +4,7 @@ import PlayerInput from "./PlayerInput";
 
 export default class PlayerController extends GameBehavior {
   linearThrust = 8000;
-  angularThrust = 9000;
+  angularThrust = 4000;
 
   private input?: PlayerInput;
   private rb2d?: RigidBody2D;
@@ -23,7 +23,12 @@ export default class PlayerController extends GameBehavior {
 
     const stick = this.input!.stick;
 
-    /* Move ship into the direction of the stick */
-    this.rb2d.accelerate(vec2.multiply(stick, this.linearThrust));
+    if (vec2.length(stick) > 0) {
+      /* Move ship into the direction of the stick */
+      this.rb2d.accelerate(vec2.multiply(stick, this.linearThrust));
+
+      /* Rotate it into the direction of the stick */
+      this.rb2d.rotateTowardsVector(stick, this.angularThrust, Math.PI / 2);
+    }
   }
 }
