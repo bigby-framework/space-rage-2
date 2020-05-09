@@ -20,6 +20,14 @@
 			"trimmed": false,
 			"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
 			"sourceSize": {"w":128,"h":128}
+		},
+		"assets/sprites/bullet.png":
+		{
+			"frame": {"x":252,"y":140,"w":80,"h":80},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
+			"sourceSize": {"w":80,"h":80}
 		}
 	}
 }
