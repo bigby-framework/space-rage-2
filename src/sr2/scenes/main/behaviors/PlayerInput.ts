@@ -5,6 +5,9 @@ export default class PlayerInput extends Behavior {
   private keyboard?: Keyboard;
 
   stick = vec2.make(0, 0);
+  buttons = {
+    a: false,
+  };
 
   awake() {
     this.keyboard = this.getNearestBehavior(Keyboard);
@@ -19,5 +22,8 @@ export default class PlayerInput extends Behavior {
     if (isPressed("s")) this.stick.y += 1;
     if (isPressed("a")) this.stick.x -= 1;
     if (isPressed("d")) this.stick.x += 1;
+
+    /* Determine button state */
+    this.buttons.a = isPressed("space");
   }
 }
