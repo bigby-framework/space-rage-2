@@ -1,8 +1,7 @@
-import { GameBehavior, vec2, Transform } from "@bigby/game";
+import { GameBehavior, vec2 } from "@bigby/game";
 import { RigidBody2D } from "@bigby/physics2d";
-import PlayerInput from "./PlayerInput";
 import Bullet from "../Bullet";
-import * as planck from "planck-js";
+import PlayerInput from "./PlayerInput";
 
 export default class PlayerController extends GameBehavior {
   linearThrust = 8000;
@@ -12,10 +11,10 @@ export default class PlayerController extends GameBehavior {
   private rb2d?: RigidBody2D;
 
   awake() {
-    this.input = this.getNearestBehavior(PlayerInput);
+    this.input = this.$up(PlayerInput);
     if (!this.input) throw "Couldn't find a PlayerInput behavior";
 
-    this.rb2d = this.getBehavior(RigidBody2D);
+    this.rb2d = this.$(RigidBody2D);
     if (!this.rb2d)
       throw "This behavior needs a RigidBody2D on the same entity.";
   }
