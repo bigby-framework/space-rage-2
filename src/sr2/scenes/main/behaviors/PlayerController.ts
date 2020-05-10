@@ -48,8 +48,5 @@ export default class PlayerController extends GameBehavior {
     });
 
     this.entity.parent?.addChild(bullet);
-
-    const rb2d = bullet.getBehavior(RigidBody2D)!;
-    rb2d.linearVelocity = vec2.multiply(rb2d.getUpVector(), 1000);
   }
 }
