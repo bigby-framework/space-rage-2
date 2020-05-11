@@ -1,5 +1,6 @@
 import { GameBehavior, Transform, Renderer } from "@bigby/game";
 import { vec2 } from "gl-matrix";
+import { $up } from "@bigby/core";
 
 export default class FollowCamera extends GameBehavior {
   target?: Transform;
@@ -8,7 +9,7 @@ export default class FollowCamera extends GameBehavior {
   private offset?: vec2;
 
   awake() {
-    this.renderer = this.getNearestBehavior(Renderer);
+    this.renderer = $up(this, Renderer);
     this.offset = vec2.fromValues(
       this.renderer!.width / 2,
       this.renderer!.height / 2

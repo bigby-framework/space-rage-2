@@ -1,4 +1,4 @@
-import { Entity } from "@bigby/core";
+import { Entity, $ } from "@bigby/core";
 import {
   Keyboard,
   Renderer,
@@ -27,6 +27,6 @@ game.awake();
 /* Preload main scene resources */
 const scene = mainScene();
 scene.preload();
-scene.getBehavior(ResourceLoader)?.loader.load(() => {
+$(scene, ResourceLoader)!.loader.load(() => {
   game.addChild(scene);
 });

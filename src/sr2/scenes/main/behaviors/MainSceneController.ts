@@ -1,6 +1,7 @@
 import { GameBehavior, Transform } from "@bigby/game";
 import FollowCamera from "~/sr2/behaviors/FollowCamera";
 import PlayerController from "./PlayerController";
+import { $ } from "bigby";
 
 export default class MainSceneController extends GameBehavior {
   preload() {
@@ -8,8 +9,10 @@ export default class MainSceneController extends GameBehavior {
   }
 
   awake() {
-    this.getBehavior(FollowCamera)!.target = this.entity
-      .getChildBehavior(PlayerController)
-      ?.getBehavior(Transform);
+    const camera = $(this, FollowCamera)!;
+    const player = this.entity.children.find((child) =>
+      $(child, PlayerController)
+    )!;
+    camera.target = $(player, Transform);
   }
 }

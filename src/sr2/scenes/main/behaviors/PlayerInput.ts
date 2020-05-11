@@ -1,4 +1,4 @@
-import { Behavior } from "@bigby/core";
+import { Behavior, $up } from "@bigby/core";
 import { Keyboard, vec2 } from "@bigby/game";
 
 export default class PlayerInput extends Behavior {
@@ -10,7 +10,7 @@ export default class PlayerInput extends Behavior {
   };
 
   awake() {
-    this.keyboard = this.getNearestBehavior(Keyboard);
+    this.keyboard = $up(this, Keyboard);
   }
 
   update() {
