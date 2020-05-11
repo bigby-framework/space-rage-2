@@ -1,8 +1,8 @@
 import { GameBehavior, vec2 } from "@bigby/game";
 import { RigidBody2D } from "@bigby/physics2d";
+import { $, $up } from "bigby";
 import Bullet from "../Bullet";
 import PlayerInput from "./PlayerInput";
-import { $up, $ } from "bigby";
 
 export default class PlayerController extends GameBehavior {
   linearThrust = 8000;
@@ -42,9 +42,15 @@ export default class PlayerController extends GameBehavior {
   }
 
   fireBullet() {
+    /* Calculate bullet position */
+    const bulletPos = vec2.add(
+      this.transform!.position,
+      vec2.multiply(this.rb2d!.getUpVector(), 65)
+    );
+
     /* Spawn a new bullet */
     const bullet = Bullet({
-      position: this.transform!.position,
+      position: bulletPos,
       rotation: this.transform!.rotation,
     });
 
