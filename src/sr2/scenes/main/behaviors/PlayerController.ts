@@ -6,8 +6,8 @@ import PlayerInput from "./PlayerInput";
 import { Cooldown } from "@bigby/timers";
 
 export default class PlayerController extends GameBehavior {
-  linearThrust = 8000;
-  angularThrust = 4000;
+  linearThrust = 4000;
+  angularThrust = 1000;
 
   private input?: PlayerInput;
   private rb2d?: RigidBody2D;
