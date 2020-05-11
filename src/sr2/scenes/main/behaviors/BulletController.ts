@@ -9,5 +9,7 @@ export default class BulletController extends GameBehavior {
 
     /* Destroy automatically */
     setTimeout(() => this.entity.destroy(), 200);
+
+    /* TODO: use a Timer/Countdown behavior for this, and introduce embedded/nested/etc. behaviors */
   }
 }
