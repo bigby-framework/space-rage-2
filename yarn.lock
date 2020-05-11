@@ -2,34 +2,41 @@
 # yarn lockfile v1
 
 
-"@bigby/core@^0.7.0-alpha.8":
-  version "0.7.0-alpha.8"
-  resolved "https://registry.yarnpkg.com/@bigby/core/-/core-0.7.0-alpha.8.tgz#e69bf2035a1acd0c9bf2bb34ef75359f6035bf8e"
-  integrity sha512-wYyRXjY2ogZZ6e9oC5my2YvJ17Ozq9xGhbmCish/02noZyh8LY2eHt/ODHqNDsQqAzF1NXVTI34wEWxUTQd+aQ==
+"@bigby/core@^0.7.0-alpha.9":
+  version "0.7.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@bigby/core/-/core-0.7.0-alpha.9.tgz#86bff3eafa14b2145de40fc7b67a14b0578b7a18"
+  integrity sha512-hQNoJAE+Ce7p+57E99O5FCC/AA37HXLR+IJt1ZVrdLC1xCpQdhzqndYDzB20ep4fgMxIwmUr/FTqE5ucK59NOw==
 
-"@bigby/game@^0.7.0-alpha.8":
-  version "0.7.0-alpha.8"
-  resolved "https://registry.yarnpkg.com/@bigby/game/-/game-0.7.0-alpha.8.tgz#bb10e9f196e5f2bce982eca304389ecaef05c534"
-  integrity sha512-fH/Gj2xmWS1YXlQgc/nNHfjmwFKWzXKXeN0DH8BrQywq1JMixqPcLiZuS8G9dAzaU2TaI7h4y026zoJrQBr7Hw==
+"@bigby/game@^0.7.0-alpha.9":
+  version "0.7.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@bigby/game/-/game-0.7.0-alpha.9.tgz#ad3932947c4ebb5f9551b08f5570c47e199077e0"
+  integrity sha512-uTSIDjQp3Fa1i8E6E7Srq7+xICMRH4AizOkusd8cNSKSob+60zigkVpN0v60eOVx05UmadVnik0bCYzdx8M4AA==
   dependencies:
-    "@bigby/core" "^0.7.0-alpha.8"
+    "@bigby/core" "^0.7.0-alpha.9"
     hotkeys-js "^3.7.6"
     pixi.js "^5.2.4"
     stats.js "^0.17.0"
 
-"@bigby/physics2d@^0.7.0-alpha.8":
-  version "0.7.0-alpha.8"
-  resolved "https://registry.yarnpkg.com/@bigby/physics2d/-/physics2d-0.7.0-alpha.8.tgz#b59fe6d3d5731fcc3a50a94f402a7ecb96e7d1c2"
-  integrity sha512-Ef76kpUUozYbG+ss35yM+z/Hz79OTXzgjwGDQUxT0LfTS1eIr81ZzQXLKYMuxnnhJLDgdgrFJb04xn3Fj6pX4A==
+"@bigby/logger@^0.7.0-alpha.9":
+  version "0.7.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@bigby/logger/-/logger-0.7.0-alpha.9.tgz#3fa893897bdb3f3d76ce296e9bb45fb271efdc59"
+  integrity sha512-2SAXu92twKzWYjMPS1q6QJLN3vi+LmHrRDii5+j5mrFjfgkWQ1LmU5anDerMGddRTVn4E7twz2wSb8LKevEy3g==
   dependencies:
-    "@bigby/core" "^0.7.0-alpha.8"
-    "@bigby/game" "^0.7.0-alpha.8"
+    "@bigby/core" "^0.7.0-alpha.9"
+
+"@bigby/physics2d@^0.7.0-alpha.9":
+  version "0.7.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@bigby/physics2d/-/physics2d-0.7.0-alpha.9.tgz#069091690fbc5ad620e5343c00cdb124d89a5f98"
+  integrity sha512-JP40raPQi6I0VYlXYY5WvAJf5xvql25O4cPr9D2+ZtUF8mMPQdJOQmH+PFSQAvsItAWFdMwNjRIwKCq/aZcQAA==
+  dependencies:
+    "@bigby/core" "^0.7.0-alpha.9"
+    "@bigby/game" "^0.7.0-alpha.9"
     planck-js "^0.3.12"
 
-"@bigby/random@^0.7.0-alpha.8":
-  version "0.7.0-alpha.8"
-  resolved "https://registry.yarnpkg.com/@bigby/random/-/random-0.7.0-alpha.8.tgz#114f5a68892cb2d17c32790c31f9c8b2bfc9f754"
-  integrity sha512-M/pYJBgkLjdbSoUmrv64yrzyF8ae0qO51Qf3Uz5mOYi08TlQeKSh8QD6e54zoVKGyWA9b1ZiTC4GWvHzk4Tb7A==
+"@bigby/random@^0.7.0-alpha.9":
+  version "0.7.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@bigby/random/-/random-0.7.0-alpha.9.tgz#6cfa15e50854654bca57202a8565ce9cbd3d711a"
+  integrity sha512-Iem7yQDNPZylCn4iewZdgA/X2BlhYL1QhVe6x+I+514TtkEPGV4S+ufOzqzqYihoa+Oq0r2OSf3b1UMN/JXTSA==
 
 "@pixi/accessibility@5.2.4":
   version "5.2.4"
@@ -802,14 +809,15 @@ big.js@^5.2.2:
   integrity sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==
 
 bigby@^0.7.0-alpha.7:
-  version "0.7.0-alpha.8"
-  resolved "https://registry.yarnpkg.com/bigby/-/bigby-0.7.0-alpha.8.tgz#b8065240f1a2abff6096538dedf73d95fac5f2a1"
-  integrity sha512-SY0WcgDi+LlgwPOZ3PZb/m5CPBOPfGE0vhWqz+B5icV0aA/JKHqi6k9KkP+hNVnCK/DKzjs29hhtH8zGwoQX4g==
+  version "0.7.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/bigby/-/bigby-0.7.0-alpha.9.tgz#fcf346328c06533a948634837c01b10937ea9a6a"
+  integrity sha512-Ryafss9KF58EehjbYW0DCxJv48Ic6fbIe6PFItGYdHD4DPMUrff3q1wbRU87anlBhDctrS1f6+QmIoriEMVp9A==
   dependencies:
-    "@bigby/core" "^0.7.0-alpha.8"
-    "@bigby/game" "^0.7.0-alpha.8"
-    "@bigby/physics2d" "^0.7.0-alpha.8"
-    "@bigby/random" "^0.7.0-alpha.8"
+    "@bigby/core" "^0.7.0-alpha.9"
+    "@bigby/game" "^0.7.0-alpha.9"
+    "@bigby/logger" "^0.7.0-alpha.9"
+    "@bigby/physics2d" "^0.7.0-alpha.9"
+    "@bigby/random" "^0.7.0-alpha.9"
 
 binary-extensions@^1.0.0:
   version "1.13.1"
@@ -3800,9 +3808,9 @@ pkg-dir@^3.0.0:
     find-up "^3.0.0"
 
 planck-js@^0.3.12:
-  version "0.3.12"
-  resolved "https://registry.yarnpkg.com/planck-js/-/planck-js-0.3.12.tgz#b8dd9aad3801d2744b10dc649d65a9b15075cd5c"
-  integrity sha512-hAqfVS9iqYjhF9+Fn0gVTtPBeGys6zdO36pRuG3CcAsY4rE2nK5l7qmsJrg+62DK8F5IRWRFmDOH8sWC8bOiqA==
+  version "0.3.13"
+  resolved "https://registry.yarnpkg.com/planck-js/-/planck-js-0.3.13.tgz#60de56ff1167f248fd40926305f63a1717859738"
+  integrity sha512-RyzwTynANukcfgFt3BeF6rmcjmwfoRSxj2tDl8cC9lpeRWwOWdL9piH4fYbQjwflJb86P2k0mWkfVLzWaDkyEw==
   dependencies:
     mocha "^6.2.2"
 
