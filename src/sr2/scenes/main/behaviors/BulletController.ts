@@ -1,5 +1,5 @@
 import { $ } from "@bigby/core";
-import { GameBehavior, vec2 } from "@bigby/game";
+import { GameBehavior, vec2, Timer, AutoDestroy } from "@bigby/game";
 import { RigidBody2D } from "@bigby/physics2d";
 
 export default class BulletController extends GameBehavior {
@@ -9,8 +9,6 @@ export default class BulletController extends GameBehavior {
     rb2d.linearVelocity = vec2.multiply(rb2d.getUpVector(), 1000);
 
     /* Destroy automatically */
-    setTimeout(() => this.entity.destroy(), 200);
-
-    /* TODO: use a Timer/Countdown behavior for this, and introduce embedded/nested/etc. behaviors */
+    this.entity.addBehavior(AutoDestroy, { duration: 0.2 });
   }
 }
