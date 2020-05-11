@@ -21,7 +21,7 @@ export default class PlayerController extends GameBehavior {
     if (!this.rb2d)
       throw "This behavior needs a RigidBody2D on the same entity.";
 
-    this.fireCooldown = this.entity.addBehavior(Cooldown, { duration: 0.065 });
+    this.fireCooldown = this.entity.addBehavior(Cooldown, { duration: 0.05 });
   }
 
   update() {

@@ -12,7 +12,7 @@ export default ({ position = { x: 0, y: 0 }, rotation = 0 } = {}) => {
       [Sprite, { resource: "assets/sprites/bullet.png", anchor: 0.5 }],
       [RigidBody2D, { fixedRotation: true, bullet: true }],
       [CircleCollider2D, { radius: 0.2 }],
-      [AutoDestroy, { duration: 0.5 }],
+      [AutoDestroy, { duration: 1 }],
       [BulletController],
     ],
   });
