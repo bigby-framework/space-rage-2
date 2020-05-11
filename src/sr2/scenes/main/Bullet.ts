@@ -1,5 +1,6 @@
 import { Entity } from "@bigby/core";
-import { Sprite, Transform, AutoDestroy } from "@bigby/game";
+import { Sprite, Transform } from "@bigby/game";
+import { AutoDestroy } from "@bigby/timers";
 import { RigidBody2D, CircleCollider2D } from "@bigby/physics2d";
 import BulletController from "./behaviors/BulletController";
 

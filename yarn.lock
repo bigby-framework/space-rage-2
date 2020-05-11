@@ -2,41 +2,49 @@
 # yarn lockfile v1
 
 
-"@bigby/core@^0.7.0-alpha.9":
-  version "0.7.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/@bigby/core/-/core-0.7.0-alpha.9.tgz#86bff3eafa14b2145de40fc7b67a14b0578b7a18"
-  integrity sha512-hQNoJAE+Ce7p+57E99O5FCC/AA37HXLR+IJt1ZVrdLC1xCpQdhzqndYDzB20ep4fgMxIwmUr/FTqE5ucK59NOw==
+"@bigby/core@^0.7.0-alpha.10":
+  version "0.7.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/@bigby/core/-/core-0.7.0-alpha.10.tgz#46ceabb8aac9b8591443efd48699bfc75086bc6d"
+  integrity sha512-eFMLrXDzwtzD6BH9QgsC5GnAiCcH8qwmmNd/CYLzci2Ut+POL66lzek67EccXg/KwLwy1fNfAaQdwF9X8OsSGg==
 
-"@bigby/game@^0.7.0-alpha.9":
-  version "0.7.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/@bigby/game/-/game-0.7.0-alpha.9.tgz#ad3932947c4ebb5f9551b08f5570c47e199077e0"
-  integrity sha512-uTSIDjQp3Fa1i8E6E7Srq7+xICMRH4AizOkusd8cNSKSob+60zigkVpN0v60eOVx05UmadVnik0bCYzdx8M4AA==
+"@bigby/game@^0.7.0-alpha.10":
+  version "0.7.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/@bigby/game/-/game-0.7.0-alpha.10.tgz#45dcf4c6e9e87ceae180403e9ba605da5f748035"
+  integrity sha512-lPhg7yC+0c1g4EWojQYvGgfgSCqE7NSupvgAXPcGnjTNoJWE/kBllNOvAL+b5qmyeVVGIeTrPu/kpIRTutk/gA==
   dependencies:
-    "@bigby/core" "^0.7.0-alpha.9"
+    "@bigby/core" "^0.7.0-alpha.10"
     hotkeys-js "^3.7.6"
     pixi.js "^5.2.4"
     stats.js "^0.17.0"
 
-"@bigby/logger@^0.7.0-alpha.9":
-  version "0.7.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/@bigby/logger/-/logger-0.7.0-alpha.9.tgz#3fa893897bdb3f3d76ce296e9bb45fb271efdc59"
-  integrity sha512-2SAXu92twKzWYjMPS1q6QJLN3vi+LmHrRDii5+j5mrFjfgkWQ1LmU5anDerMGddRTVn4E7twz2wSb8LKevEy3g==
+"@bigby/logger@^0.7.0-alpha.10":
+  version "0.7.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/@bigby/logger/-/logger-0.7.0-alpha.10.tgz#ca5da2558123fc6aee28e023842756defe916143"
+  integrity sha512-34co34PUULwTV85iEBugh9JPp8xgoLnfa4D7JoJF/ZdJBfu3gRL7dMqARGtm60Us0wspg6fIMcOMO0kLxl3X2Q==
   dependencies:
-    "@bigby/core" "^0.7.0-alpha.9"
+    "@bigby/core" "^0.7.0-alpha.10"
 
-"@bigby/physics2d@^0.7.0-alpha.9":
-  version "0.7.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/@bigby/physics2d/-/physics2d-0.7.0-alpha.9.tgz#069091690fbc5ad620e5343c00cdb124d89a5f98"
-  integrity sha512-JP40raPQi6I0VYlXYY5WvAJf5xvql25O4cPr9D2+ZtUF8mMPQdJOQmH+PFSQAvsItAWFdMwNjRIwKCq/aZcQAA==
+"@bigby/physics2d@^0.7.0-alpha.10":
+  version "0.7.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/@bigby/physics2d/-/physics2d-0.7.0-alpha.10.tgz#7d333cb68b61a4d1572fb76711cb57b1ded0a380"
+  integrity sha512-sdOTpUAoJE+cXe5RRWzV/CYFJTeI2LRGWq7abGhJcRPpSX1offfIu3fnEVIK6yaYwBc4cvEr0LoOZtgNZW+51g==
   dependencies:
-    "@bigby/core" "^0.7.0-alpha.9"
-    "@bigby/game" "^0.7.0-alpha.9"
+    "@bigby/core" "^0.7.0-alpha.10"
+    "@bigby/game" "^0.7.0-alpha.10"
+    "@bigby/logger" "^0.7.0-alpha.10"
     planck-js "^0.3.12"
 
 "@bigby/random@^0.7.0-alpha.9":
   version "0.7.0-alpha.9"
   resolved "https://registry.yarnpkg.com/@bigby/random/-/random-0.7.0-alpha.9.tgz#6cfa15e50854654bca57202a8565ce9cbd3d711a"
   integrity sha512-Iem7yQDNPZylCn4iewZdgA/X2BlhYL1QhVe6x+I+514TtkEPGV4S+ufOzqzqYihoa+Oq0r2OSf3b1UMN/JXTSA==
+
+"@bigby/timers@^0.7.0-alpha.10":
+  version "0.7.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/@bigby/timers/-/timers-0.7.0-alpha.10.tgz#4d5db8b531fb84fa88506423038a708ac52fc9fc"
+  integrity sha512-MVSUbg7VC+5bPqYtHrCUxyzu0t2Ls72S8vYSZ1bGXZKwdcS+G3rF8XlhW09wWFNIJbYGFKhFTTOljzIcbNn4Dg==
+  dependencies:
+    "@bigby/core" "^0.7.0-alpha.10"
 
 "@pixi/accessibility@5.2.4":
   version "5.2.4"
@@ -809,15 +817,16 @@ big.js@^5.2.2:
   integrity sha512-vyL2OymJxmarO8gxMr0mhChsO9QGwhynfuu4+MHTAW6czfq9humCB7rKpUjDd9YUiDPU4mzpyupFSvOClAwbmQ==
 
 bigby@^0.7.0-alpha.7:
-  version "0.7.0-alpha.9"
-  resolved "https://registry.yarnpkg.com/bigby/-/bigby-0.7.0-alpha.9.tgz#fcf346328c06533a948634837c01b10937ea9a6a"
-  integrity sha512-Ryafss9KF58EehjbYW0DCxJv48Ic6fbIe6PFItGYdHD4DPMUrff3q1wbRU87anlBhDctrS1f6+QmIoriEMVp9A==
+  version "0.7.0-alpha.10"
+  resolved "https://registry.yarnpkg.com/bigby/-/bigby-0.7.0-alpha.10.tgz#8b0d7e572676c47c90a78851229d72b8e7307739"
+  integrity sha512-iIzS7z8j4qQYio93IlvLiq+9BBXJPYMZrfo2hTt/R26IGdgiX38++NdCM1tJBTI9qAU4aZ4XU9Zj+ib0zBRN+Q==
   dependencies:
-    "@bigby/core" "^0.7.0-alpha.9"
-    "@bigby/game" "^0.7.0-alpha.9"
-    "@bigby/logger" "^0.7.0-alpha.9"
-    "@bigby/physics2d" "^0.7.0-alpha.9"
+    "@bigby/core" "^0.7.0-alpha.10"
+    "@bigby/game" "^0.7.0-alpha.10"
+    "@bigby/logger" "^0.7.0-alpha.10"
+    "@bigby/physics2d" "^0.7.0-alpha.10"
     "@bigby/random" "^0.7.0-alpha.9"
+    "@bigby/timers" "^0.7.0-alpha.10"
 
 binary-extensions@^1.0.0:
   version "1.13.1"

@@ -10,7 +10,7 @@
     "build": "webpack --config webpack/webpack.dev.js",
     "build:production": "webpack --config webpack/webpack.prod.js",
     "dev": "webpack-dev-server --config webpack/webpack.dev.js",
-    "bootstrap": "yarn link bigby @bigby/core @bigby/game @bigby/physics2d @bigby/random @bigby/logger"
+    "bootstrap": "yarn link bigby @bigby/core @bigby/game @bigby/physics2d @bigby/random @bigby/logger @bigby/timers"
   },
   "devDependencies": {
     "@types/stats.js": "^0.17.0",
