@@ -8,7 +8,7 @@ export default class MainSceneController extends GameBehavior {
   }
 
   awake() {
-    this.$(FollowCamera)!.target = this.entity
+    this.getBehavior(FollowCamera)!.target = this.entity
       .getChildBehavior(PlayerController)
       ?.getBehavior(Transform);
   }
