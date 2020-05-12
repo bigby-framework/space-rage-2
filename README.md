@@ -1,7 +1,16 @@
-### typescript-webpack-starter
+# SPACE RAGE 2: BAD PROSPECTS
 
-There are many TypeScript Webpack starters, but this one is mine.
+A game built using the Bigby Framework.
 
-- Webpack 4.x (with separate configs for development and production)
-- Typescript 3.x
-- `assets` is copied into the build directory (useful for HTML5 games)
+### TODO
+
+- [ ] Make mouse 1 act as button A
+- [ ] Make backgrounds scroll endlessly
+- [ ] Add multiple parallax backgrounds
+- [ ] Asteroid health
+- [ ] Split up destroyed asteroids into smaller asteroids
+- [ ] Physics explosions
+- [ ] Particles
+- [ ] Enemies
+- [ ] Sound
+- [ ] Music

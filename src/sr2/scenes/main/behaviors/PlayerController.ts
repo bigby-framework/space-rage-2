@@ -7,7 +7,7 @@ import { Cooldown } from "@bigby/timers";
 
 export default class PlayerController extends GameBehavior {
   linearThrust = 4000;
-  angularThrust = 1000;
+  angularThrust = 4000;
 
   private input?: PlayerInput;
   private rb2d?: RigidBody2D;
@@ -28,13 +28,16 @@ export default class PlayerController extends GameBehavior {
     if (!this.rb2d) return;
     if (!this.input) return;
 
-    /* Movement */
     const { leftStick, rightStick } = this.input!;
 
+    /* Left Stick: Movement */
     if (vec2.length(leftStick) > 0) {
       /* Move ship into the direction of the stick */
       this.rb2d.accelerate(vec2.multiply(leftStick, this.linearThrust));
+    }
 
+    /* Right Stick: Rotation */
+    if (vec2.length(rightStick) > 0) {
       /* Rotate it into the direction of the right stick */
       this.rb2d.rotateTowardsVector(
         rightStick,
@@ -43,7 +46,7 @@ export default class PlayerController extends GameBehavior {
       );
     }
 
-    /* Firing */
+    /* Button A: Firing */
     if (this.input.buttons.a) {
       this.fireCooldown?.ifReady(() => this.fireBullet());
     }

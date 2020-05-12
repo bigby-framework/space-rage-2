@@ -1,5 +1,5 @@
 import { Behavior, $up } from "@bigby/core";
-import { Keyboard, vec2 } from "@bigby/game";
+import { Keyboard, vec2, Renderer } from "@bigby/game";
 
 export default class PlayerInput extends Behavior {
   private keyboard?: Keyboard;
@@ -28,6 +28,16 @@ export default class PlayerInput extends Behavior {
     if (isPressed("s")) this.leftStick.y += 1;
     if (isPressed("a")) this.leftStick.x -= 1;
     if (isPressed("d")) this.leftStick.x += 1;
+
+    /* Handle right stick */
+    const renderer = $up(this, Renderer)!;
+    const mouse = renderer.app!.renderer.plugins.interaction.mouse;
+    const pos = mouse.getLocalPosition(renderer.app!.stage);
+
+    pos.x -= renderer.width / 2;
+    pos.y -= renderer.height / 2;
+
+    this.rightStick = pos;
 
     /* Determine button state */
     this.buttons.a = isPressed("space");
