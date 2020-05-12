@@ -14,5 +14,10 @@ export default class BulletController extends GameBehavior {
 
     /* Set velocity */
     rb2d.linearVelocity = vec2.multiply(rb2d.getUpVector(), 1000);
+
+    /* Handle collisions */
+    rb2d.onContactBegin((contact) => {
+      this.entity.destroy();
+    });
   }
 }
