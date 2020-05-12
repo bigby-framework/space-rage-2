@@ -4,7 +4,9 @@ import { Keyboard, vec2 } from "@bigby/game";
 export default class PlayerInput extends Behavior {
   private keyboard?: Keyboard;
 
-  stick = vec2.make(0, 0);
+  leftStick = vec2.make(0, 0);
+  rightStick = vec2.make(0, 0);
+
   buttons = {
     a: false,
   };
@@ -14,14 +16,18 @@ export default class PlayerInput extends Behavior {
   }
 
   update() {
-    this.stick.x = 0;
-    this.stick.y = 0;
+    /* Reset sticks */
+    this.leftStick.x = 0;
+    this.leftStick.y = 0;
+    this.rightStick.x = 0;
+    this.rightStick.y = 0;
 
+    /* Handle left stick */
     const { isPressed } = this.keyboard!;
-    if (isPressed("w")) this.stick.y -= 1;
-    if (isPressed("s")) this.stick.y += 1;
-    if (isPressed("a")) this.stick.x -= 1;
-    if (isPressed("d")) this.stick.x += 1;
+    if (isPressed("w")) this.leftStick.y -= 1;
+    if (isPressed("s")) this.leftStick.y += 1;
+    if (isPressed("a")) this.leftStick.x -= 1;
+    if (isPressed("d")) this.leftStick.x += 1;
 
     /* Determine button state */
     this.buttons.a = isPressed("space");

@@ -29,14 +29,18 @@ export default class PlayerController extends GameBehavior {
     if (!this.input) return;
 
     /* Movement */
-    const stick = this.input!.stick;
+    const { leftStick, rightStick } = this.input!;
 
-    if (vec2.length(stick) > 0) {
+    if (vec2.length(leftStick) > 0) {
       /* Move ship into the direction of the stick */
-      this.rb2d.accelerate(vec2.multiply(stick, this.linearThrust));
+      this.rb2d.accelerate(vec2.multiply(leftStick, this.linearThrust));
 
-      /* Rotate it into the direction of the stick */
-      this.rb2d.rotateTowardsVector(stick, this.angularThrust, Math.PI / 2);
+      /* Rotate it into the direction of the right stick */
+      this.rb2d.rotateTowardsVector(
+        rightStick,
+        this.angularThrust,
+        Math.PI / 2
+      );
     }
 
     /* Firing */
