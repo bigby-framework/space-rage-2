@@ -5,6 +5,7 @@ import {
   ResourceLoader,
   Ticker,
   StatsPanel,
+  Mouse,
 } from "@bigby/game";
 import { Logger } from "@bigby/logger";
 import * as PIXI from "pixi.js";
@@ -19,7 +20,15 @@ PIXI.settings.STRICT_TEXTURE_CACHE = true;
 /* Game */
 const game = new Entity({
   name: "Main Game",
-  behaviors: [Renderer, Ticker, Keyboard, PlayerInput, StatsPanel, Logger],
+  behaviors: [
+    Renderer,
+    Ticker,
+    Keyboard,
+    Mouse,
+    PlayerInput,
+    StatsPanel,
+    Logger,
+  ],
 });
 
 game.awake();

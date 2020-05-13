@@ -56,7 +56,7 @@ export default class PlayerController extends GameBehavior {
     /* Spawn a new bullet */
     const bullet = Bullet({
       position: bulletPos,
-      rotation: vec2.toRadians(direction),
+      rotation: vec2.toRadians(direction) + Math.PI / 2,
     });
 
     this.entity.parent?.addChild(bullet);
