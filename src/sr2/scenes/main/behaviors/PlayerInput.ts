@@ -40,6 +40,7 @@ export default class PlayerInput extends Behavior {
     this.rightStick = pos;
 
     /* Determine button state */
-    this.buttons.a = isPressed("space") || this.mouse!.isLeftButtonPressed();
+    this.buttons.a =
+      isPressed("space") || this.mouse!.isButtonPressed(Mouse.LeftButton);
   }
 }
