@@ -1,9 +1,10 @@
 import { GameBehavior, vec2 } from "@bigby/game";
+import { IVec2 } from "@bigby/game/dist/vec2";
 import { RigidBody2D } from "@bigby/physics2d";
+import { Cooldown } from "@bigby/timers";
 import { $, $up } from "bigby";
 import Bullet from "../Bullet";
 import PlayerInput from "./PlayerInput";
-import { Cooldown } from "@bigby/timers";
 
 export default class PlayerController extends GameBehavior {
   linearThrust = 4000;
@@ -34,35 +35,28 @@ export default class PlayerController extends GameBehavior {
     if (vec2.length(leftStick) > 0) {
       /* Move ship into the direction of the stick */
       this.rb2d.accelerate(vec2.multiply(leftStick, this.linearThrust));
-    }
 
-    /* Right Stick: Rotation */
-    if (vec2.length(rightStick) > 0) {
-      /* Rotate it into the direction of the right stick */
-      this.rb2d.rotateTowardsVector(
-        rightStick,
-        this.angularThrust,
-        Math.PI / 2
-      );
+      /* Rotate it into the direction we're flying */
+      this.rb2d.rotateTowardsVector(leftStick, this.angularThrust, Math.PI / 2);
     }
 
     /* Button A: Firing */
     if (this.input.buttons.a) {
-      this.fireCooldown?.ifReady(() => this.fireBullet());
+      this.fireCooldown?.ifReady(() => this.fireBullet(rightStick));
     }
   }
 
-  fireBullet() {
+  fireBullet(direction: IVec2) {
     /* Calculate bullet position */
     const bulletPos = vec2.add(
       this.transform!.position,
-      vec2.multiply(this.rb2d!.getUpVector(), 65)
+      vec2.multiply(this.rb2d!.getUpVector(), 10)
     );
 
     /* Spawn a new bullet */
     const bullet = Bullet({
       position: bulletPos,
-      rotation: this.transform!.rotation,
+      rotation: vec2.toRadians(direction),
     });
 
     this.entity.parent?.addChild(bullet);
