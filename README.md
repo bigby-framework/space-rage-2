@@ -4,6 +4,9 @@ A game built using the Bigby Framework.
 
 ### TODO
 
+- [x] Ship movement
+- [x] Asteroids
+- [ ] Mouse crosshair (UI layer)
 - [ ] Make mouse 1 act as button A
 - [ ] Make backgrounds scroll endlessly
 - [ ] Add multiple parallax backgrounds
@@ -14,3 +17,4 @@ A game built using the Bigby Framework.
 - [ ] Enemies
 - [ ] Sound
 - [ ] Music
+- [ ] Controller support
