@@ -1,7 +1,7 @@
 import { $ } from "@bigby/core";
 import { GameBehavior, vec2 } from "@bigby/game";
 import { RigidBody2D } from "@bigby/physics2d";
-import { minusPlus } from "~/../../bigby/packages/bigby-random/dist";
+import { minusPlus } from "@bigby/random";
 
 export default class BulletController extends GameBehavior {
   spread = 0.07;
