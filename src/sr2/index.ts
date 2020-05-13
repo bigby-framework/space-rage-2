@@ -14,6 +14,7 @@ import PlayerInput from "./scenes/main/behaviors/PlayerInput";
 
 /* Set up PIXI */
 window.PIXI = PIXI;
+PIXI.utils.skipHello();
 PIXI.settings.SCALE_MODE = PIXI.SCALE_MODES.NEAREST;
 PIXI.settings.STRICT_TEXTURE_CACHE = true;
 
