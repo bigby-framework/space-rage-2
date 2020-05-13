@@ -6,3 +6,15 @@ body {
   padding: 0;
   overflow: hidden;
 }
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  width: 1280px;
+  height: 720px;
+}
