@@ -4,7 +4,7 @@
         
         {
             "density": 2, "friction": 0, "bounce": 0, 
-            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "filter": { "categoryBits": 1, "maskBits": 65533 },
             "points": [{"x": -6, "y": 36}, {"x": -38, "y": 28}, {"x": -16, "y": -36}, {"x": 16, "y": -36}, {"x": 40, "y": 26}]
         }
     ]
@@ -13,12 +13,12 @@
         
         {
             "density": 3, "friction": 0, "bounce": 0, 
-            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "filter": { "categoryBits": 4, "maskBits": 65535 },
             "points": [{"x": -22, "y": -101}, {"x": 77, "y": -5}, {"x": 97, "y": 62}, {"x": -5, "y": 110}, {"x": -70, "y": 75}, {"x": -104, "y": 30}, {"x": -110, "y": -40}, {"x": -84, "y": -102}]
         } ,
         {
             "density": 3, "friction": 0, "bounce": 0, 
-            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "filter": { "categoryBits": 4, "maskBits": 65535 },
             "points": [{"x": -5, "y": 110}, {"x": 97, "y": 62}, {"x": 85, "y": 110}]
         }
     ]
@@ -27,7 +27,7 @@
         
         {
             "density": 2, "friction": 0, "bounce": 0, 
-            "filter": { "categoryBits": 1, "maskBits": 65535 },
+            "filter": { "categoryBits": 2, "maskBits": 12 },
             "points": [{"x": 9, "y": 11}, {"x": -7, "y": 12}, {"x": -9, "y": -37}, {"x": 9, "y": -37}]
         }
     ]
