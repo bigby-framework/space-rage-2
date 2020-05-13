@@ -9,7 +9,7 @@ export default ({ position = { x: 0, y: 0 }, rotation = 0 } = {}) => {
   return new Entity({
     name: "Bullet",
     behaviors: [
-      [Transform, { position, rotation, scale: 0.5 }],
+      [Transform, { position, rotation, scale: { x: 0.5, y: 0.5 } }],
       [Sprite, { resource: "assets/sprites/bullet.png", anchor: 0.5 }],
       [RigidBody2D, { fixedRotation: true, bullet: true }],
       [PhysicsDataLoader2D, { data: bullet }],
