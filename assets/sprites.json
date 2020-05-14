@@ -1,7 +1,7 @@
 {
 	"meta": {
 		"image": "sprites.png",
-		"size": {"w":384,"h":248},
+		"size": {"w":427,"h":384},
 		"scale": "1"
 	},
 	"frames": {
@@ -13,9 +13,17 @@
 			"spriteSourceSize": {"x":0,"y":0,"w":240,"h":240},
 			"sourceSize": {"w":240,"h":240}
 		},
+		"assets/sprites/asteroid-rock1.png":
+		{
+			"frame": {"x":252,"y":4,"w":171,"h":123},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":171,"h":123},
+			"sourceSize": {"w":171,"h":123}
+		},
 		"assets/sprites/lemming.png":
 		{
-			"frame": {"x":252,"y":4,"w":128,"h":128},
+			"frame": {"x":4,"y":252,"w":128,"h":128},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
@@ -23,11 +31,51 @@
 		},
 		"assets/sprites/bullet.png":
 		{
-			"frame": {"x":252,"y":140,"w":80,"h":80},
+			"frame": {"x":252,"y":135,"w":80,"h":80},
 			"rotated": false,
 			"trimmed": false,
 			"spriteSourceSize": {"x":0,"y":0,"w":80,"h":80},
 			"sourceSize": {"w":80,"h":80}
+		},
+		"assets/sprites/asteroid-rock2.png":
+		{
+			"frame": {"x":340,"y":135,"w":69,"h":66},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":69,"h":66},
+			"sourceSize": {"w":69,"h":66}
+		},
+		"assets/sprites/asteroid-rock3.png":
+		{
+			"frame": {"x":140,"y":252,"w":66,"h":66},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":66,"h":66},
+			"sourceSize": {"w":66,"h":66}
+		},
+		"assets/sprites/asteroid-gem3.png":
+		{
+			"frame": {"x":214,"y":252,"w":30,"h":33},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":30,"h":33},
+			"sourceSize": {"w":30,"h":33}
+		},
+		"assets/sprites/asteroid-gem2.png":
+		{
+			"frame": {"x":252,"y":252,"w":27,"h":30},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":27,"h":30},
+			"sourceSize": {"w":27,"h":30}
+		},
+		"assets/sprites/asteroid-gem1.png":
+		{
+			"frame": {"x":252,"y":223,"w":21,"h":21},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {"x":0,"y":0,"w":21,"h":21},
+			"sourceSize": {"w":21,"h":21}
 		}
 	}
 }
