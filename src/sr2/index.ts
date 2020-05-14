@@ -1,11 +1,11 @@
-import { Entity, $ } from "@bigby/core";
+import { Entity } from "@bigby/core";
 import {
   Keyboard,
+  Mouse,
   Renderer,
   ResourceLoader,
-  Ticker,
   StatsPanel,
-  Mouse,
+  Ticker,
 } from "@bigby/game";
 import { Logger } from "@bigby/logger";
 import * as PIXI from "pixi.js";
@@ -37,6 +37,6 @@ game.awake();
 /* Preload main scene resources */
 const scene = mainScene();
 scene.preload();
-$(scene, ResourceLoader)!.loader.load(() => {
+scene.getBehavior(ResourceLoader)!.loader.load(() => {
   game.addChild(scene);
 });

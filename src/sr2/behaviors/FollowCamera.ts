@@ -1,5 +1,4 @@
 import { GameBehavior, Transform, Renderer, vec2 } from "@bigby/game";
-import { $up } from "@bigby/core";
 
 export default class FollowCamera extends GameBehavior {
   target?: Transform;
@@ -8,7 +7,7 @@ export default class FollowCamera extends GameBehavior {
   private offset?: vec2.IVec2;
 
   awake() {
-    this.renderer = $up(this, Renderer);
+    this.renderer = this.$(Renderer, true);
     this.offset = vec2.make(
       this.renderer!.width / 2,
       this.renderer!.height / 2

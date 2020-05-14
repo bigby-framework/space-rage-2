@@ -1,5 +1,5 @@
-import { Behavior, $up } from "@bigby/core";
-import { Keyboard, vec2, Renderer, Mouse } from "@bigby/game";
+import { Behavior } from "@bigby/core";
+import { Keyboard, Mouse, vec2 } from "@bigby/game";
 
 export default class PlayerInput extends Behavior {
   private keyboard?: Keyboard;
@@ -13,8 +13,8 @@ export default class PlayerInput extends Behavior {
   };
 
   awake() {
-    this.keyboard = $up(this, Keyboard);
-    this.mouse = $up(this, Mouse);
+    this.keyboard = this.$(Keyboard, true);
+    this.mouse = this.$(Mouse, true);
   }
 
   update() {
